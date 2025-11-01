@@ -1,0 +1,64 @@
+{
+  "placeholderImages": [
+    {
+      "id": "hero",
+      "description": "A beautiful landscape representing travel in India.",
+      "imageUrl": "https://images.unsplash.com/photo-1491497895121-1334fc14d8c9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxpbmRpYSUyMGxhbmRzY2FwZXxlbnwwfHx8fDE3NTk2OTE4ODB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "india landscape"
+    },
+    {
+      "id": "bengaluru-city",
+      "description": "Skyline of Bengaluru",
+      "imageUrl": "https://images.unsplash.com/photo-1580906185642-01432790adec?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxiZW5nYWx1cnUlMjBza3lsaW5lfGVufDB8fHx8MTc1OTY5MTg4MHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "bengaluru skyline"
+    },
+    {
+      "id": "delhi-city",
+      "description": "Iconic landmark in Delhi",
+      "imageUrl": "https://images.unsplash.com/photo-1716747713303-0cd4a88c9112?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxkZWxoaSUyMG1vbnVtZW50fGVufDB8fHx8MTc1OTYwMzQ2OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "delhi monument"
+    },
+    {
+      "id": "jaipur-city",
+      "description": "Hawa Mahal in Jaipur",
+      "imageUrl": "https://images.unsplash.com/photo-1586356307549-32c0684da5e0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxqYWlwdXIlMjBwYWxhY2V8ZW58MHx8fHwxNzU5NjAzNDY5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "jaipur palace"
+    },
+    {
+      "id": "mumbai-city",
+      "description": "Gateway of India in Mumbai",
+      "imageUrl": "https://images.unsplash.com/photo-1562979314-1ace75b44e00?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtdW1iYWl8ZW58MHx8fHwxNzU5NzA0MjUwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "mumbai landmark"
+    },
+    {
+      "id": "agra-city",
+      "description": "The Taj Mahal in Agra",
+      "imageUrl": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhZ3JhfGVufDB8fHx8MTc1OTcwNDI1MHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "agra tajmahal"
+    },
+    {
+      "id": "goa-city",
+      "description": "A beach in Goa",
+      "imageUrl": "https://images.unsplash.com/photo-1509233725247-49e657c54213?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxnb2ElMjBiZWFjaHxlbnwwfHx8fDE3NTk3MDQyNTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "goa beach"
+    },
+    {
+      "id": "chennai-city",
+      "description": "Chennai Central Railway Station",
+      "imageUrl": "https://images.unsplash.com/photo-1582510003544-6c7e63c16823?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+      "imageHint": "chennai station"
+    },
+    {
+      "id": "kolkata-city",
+      "description": "Howrah Bridge in Kolkata",
+      "imageUrl": "https://images.unsplash.com/photo-1572459425825-1e3df6307ab9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+      "imageHint": "kolkata bridge"
+    },
+    {
+      "id": "hyderabad-city",
+      "description": "Charminar in Hyderabad",
+      "imageUrl": "https://images.unsplash.com/photo-1589332213939-c563632388e8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+      "imageHint": "hyderabad monument"
+    }
+  ]
+}

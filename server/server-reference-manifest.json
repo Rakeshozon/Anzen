@@ -1,0 +1,17 @@
+{
+  "node": {
+    "40327641bc7d9829ada1ef1a023f6ac39ba440dac4": {
+      "workers": {
+        "app/city/[cityName]/page": {
+          "moduleId": "[project]/.next-internal/server/app/city/[cityName]/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/ai/flows/find-attractions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/city/[cityName]/page": "action-browser"
+      }
+    }
+  },
+  "edge": {},
+  "encryptionKey": "rjPPJOdrY+t7Fi7nB7NZIdVDU+PeErnlcouqLYmuC44="
+}
