@@ -7,7 +7,7 @@ import { Toaster } from "@/components/ui/toaster";
 
 
 export const metadata: Metadata = {
-  title: 'DekhoBharat',
+  title: 'DekhoBharath',
   description: 'Discover Incredible India',
 };
 
