@@ -23,8 +23,8 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-8 text-center text-sm text-muted-foreground">
-          <p>Created by Rakeshozon, co-founder Puli venu and Rakesh</p>
-          <p>&copy; {new Date().getFullYear()} DekhoBharat. All Rights Reserved.</p>
+          <p>Created by Rakeshozon, co-founder Dr.Puli venu and Rakesh</p>
+          <p>&copy; {new Date().getFullYear()} DekhoBharath. All Rights Reserved.</p>
         </div>
       </div>
     </footer>
