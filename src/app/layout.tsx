@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import Script from 'next/script'; // ✅ Import Script from next
+import Script from 'next/script';
 import './globals.css';
 import { cn } from '@/lib/utils';
 import { Header } from '@/components/common/Header';
@@ -58,12 +58,22 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        {/* ✅ ConsentManager Script (must load early) */}
+        <Script
+          id="consent-manager"
+          src="https://cdn.consentmanager.net/delivery/autoblocking/83adfde8529dd.js"
+          data-cmp-ab="1"
+          data-cmp-host="c.delivery.consentmanager.net"
+          data-cmp-cdn="cdn.consentmanager.net"
+          data-cmp-codesrc="16"
+          strategy="beforeInteractive"
+          type="text/javascript"
+        />
+
         {/* ✅ Google Analytics */}
         <Script
           async
