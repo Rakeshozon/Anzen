@@ -1,8 +1,17 @@
+"use client";
+
 import { Building2, Briefcase, Ticket } from "lucide-react";
+import Script from "next/script";
 
 export function Footer() {
   return (
-    <footer className="w-full border-t bg-background">
+    <footer className="w-full border-t bg-background relative">
+      {/* Jotform Chatbot */}
+      <Script
+        src="https://cdn.jotfor.ms/agent/embedjs/019a5274c870740c98e00561dfb8b89fc0f2/embed.js"
+        strategy="afterInteractive"
+      />
+
       <div className="container py-8">
         <div className="text-center">
           <h3 className="text-lg font-semibold text-primary mb-4 font-headline">
@@ -12,7 +21,7 @@ export function Footer() {
             Exciting new features are on the way to make your travel planning even easier!
           </p>
 
-          {/* Coming soon icons */}
+          {/* Coming Soon Icons */}
           <div className="flex justify-center items-center gap-8 text-muted-foreground mb-8">
             <div className="flex flex-col items-center gap-2">
               <Building2 className="h-8 w-8" />
@@ -82,12 +91,28 @@ export function Footer() {
               />
             </a>
           </div>
+
+          {/* Contact Email */}
+          <p className="text-sm text-muted-foreground mb-4">
+            📧 Contact us at{" "}
+            <a
+              href="mailto:dekhobharath@gmail.com"
+              className="text-primary hover:underline"
+            >
+              dekhobharath@gmail.com
+            </a>
+          </p>
         </div>
 
         {/* Copyright + Credits */}
         <div className="mt-4 text-center text-sm text-muted-foreground">
-          <p>Created by <strong>Rakeshozon</strong>, co-founders <strong>Dr. Puli Venu</strong> and <strong>Rakesh</strong></p>
-          <p>&copy; {new Date().getFullYear()} <strong>DekhoBharath</strong>. All Rights Reserved.</p>
+          <p>
+            Created by <strong>Rakeshozon</strong>, co-founders{" "}
+            <strong>Dr. Puli Venu</strong> and <strong>Rakesh</strong>
+          </p>
+          <p>
+            &copy; {new Date().getFullYear()} <strong>DekhoBharath</strong>. All Rights Reserved.
+          </p>
         </div>
       </div>
     </footer>
