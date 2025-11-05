@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Script from 'next/script'; // ✅ Import Script from next
 import './globals.css';
 import { cn } from '@/lib/utils';
 import { Header } from '@/components/common/Header';
@@ -18,22 +19,19 @@ export const metadata: Metadata = {
     'Heritage Sites',
     'Explore India',
   ],
-  authors: [
-    { name: 'Rakesh', url: 'https://github.com/Rakeshozon' },
-   
-  ],
-  creator: 'Rakesh & DR.Puli Venu',
+  authors: [{ name: 'Rakesh', url: 'https://github.com/Rakeshozon' }],
+  creator: 'Rakesh & Dr. Puli Venu',
   publisher: 'Dekho Bharath',
-  metadataBase: new URL('https://dekhobharath.in'),
+  metadataBase: new URL('https://dekhobharath.com'),
   openGraph: {
     title: 'Dekho Bharath | Discover Incredible India',
     description:
       'Explore India’s hidden gems, heritage sites, food, and culture with Dekho Bharath — your ultimate travel and culture guide.',
-    url: 'https://dekhobharath.in',
+    url: 'https://dekhobharath.com',
     siteName: 'Dekho Bharath',
     images: [
       {
-        url: '/og-image.jpg', // Place this in your /public folder
+        url: '/og-image.jpg',
         width: 1200,
         height: 630,
         alt: 'Dekho Bharath — Discover Incredible India',
@@ -55,7 +53,7 @@ export const metadata: Metadata = {
     shortcut: '/favicon.ico',
     apple: '/apple-touch-icon.png',
   },
-  themeColor: '#0ea5e9', // Tailwind sky-500
+  themeColor: '#0ea5e9',
 };
 
 export default function RootLayout({
@@ -66,6 +64,21 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        {/* ✅ Google Analytics */}
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-TMG0YCW2LL"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-TMG0YCW2LL');
+          `}
+        </Script>
+
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
@@ -77,11 +90,7 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body
-        className={cn(
-          'min-h-screen bg-background font-body antialiased'
-        )}
-      >
+      <body className={cn('min-h-screen bg-background font-body antialiased')}>
         <div className="relative flex min-h-screen flex-col">
           <Header />
           <main className="flex-1">{children}</main>
