@@ -6,6 +6,23 @@ import { Header } from '@/components/common/Header';
 import { Footer } from '@/components/common/Footer';
 import { Toaster } from "@/components/ui/toaster";
 
+
+export default function RootLayout({ children }) {
+  return (
+    <html lang="en">
+      <head>
+        {/* ✅ Google AdSense auto-ads */}
+        <Script
+          async
+          strategy="afterInteractive"
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1474842596122746"
+          crossOrigin="anonymous"
+        />
+      </head>
+      <body>{children}</body>
+    </html>
+  );
+}
 export const metadata: Metadata = {
   title: 'Dekho Bharath | Discover Incredible India',
   description:
