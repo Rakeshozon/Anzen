@@ -19,9 +19,13 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <meta name="google-adsense-account" content="ca-pub-1474842596122746">
+        {/* ✅ Google AdSense Verification */}
+        <meta
+          name="google-adsense-account"
+          content="ca-pub-1474842596122746"
+        />
 
-        {/* ✅ Consent Manager (GDPR / Cookie Banner) */}
+        {/* ✅ Consent-Manager (GDPR/Privacy) */}
         <Script
           id="consent-manager"
           src="https://cdn.consentmanager.net/delivery/autoblocking/83adfde8529dd.js"
@@ -48,7 +52,7 @@ export default function RootLayout({
           `}
         </Script>
 
-        {/* ✅ Google AdSense (Auto Ads Enabled) */}
+        {/* ✅ Google AdSense (Auto Ads enabled) */}
         <Script
           async
           strategy="afterInteractive"
@@ -71,17 +75,10 @@ export default function RootLayout({
 
       <body className={cn('min-h-screen bg-background font-body antialiased')}>
         <div className="relative flex min-h-screen flex-col">
-          {/* ✅ Header */}
           <Header />
-
-          {/* ✅ Main content area */}
           <main className="flex-1">{children}</main>
-
-          {/* ✅ Footer */}
           <Footer />
         </div>
-
-        {/* ✅ Toast notifications */}
         <Toaster />
       </body>
     </html>
