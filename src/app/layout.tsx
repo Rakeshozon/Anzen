@@ -6,23 +6,6 @@ import { Header } from '@/components/common/Header';
 import { Footer } from '@/components/common/Footer';
 import { Toaster } from "@/components/ui/toaster";
 
-
-export default function RootLayout({ children }) {
-  return (
-    <html lang="en">
-      <head>
-        {/* ✅ Google AdSense auto-ads */}
-        <Script
-          async
-          strategy="afterInteractive"
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1474842596122746"
-          crossOrigin="anonymous"
-        />
-      </head>
-      <body>{children}</body>
-    </html>
-  );
-}
 export const metadata: Metadata = {
   title: 'Dekho Bharath | Discover Incredible India',
   description:
@@ -36,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        {/* ✅ Consent-Manager (GDPR/Privacy) */}
+        {/* ✅ Consent Manager (GDPR / Cookie Banner) */}
         <Script
           id="consent-manager"
           src="https://cdn.consentmanager.net/delivery/autoblocking/83adfde8529dd.js"
@@ -63,7 +46,7 @@ export default function RootLayout({
           `}
         </Script>
 
-        {/* ✅ Google AdSense (Auto Ads enabled) */}
+        {/* ✅ Google AdSense (Auto Ads Enabled) */}
         <Script
           async
           strategy="afterInteractive"
@@ -71,6 +54,7 @@ export default function RootLayout({
           crossOrigin="anonymous"
         />
 
+        {/* ✅ Fonts */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
@@ -85,10 +69,17 @@ export default function RootLayout({
 
       <body className={cn('min-h-screen bg-background font-body antialiased')}>
         <div className="relative flex min-h-screen flex-col">
+          {/* ✅ Header */}
           <Header />
+
+          {/* ✅ Main content area */}
           <main className="flex-1">{children}</main>
+
+          {/* ✅ Footer */}
           <Footer />
         </div>
+
+        {/* ✅ Toast notifications */}
         <Toaster />
       </body>
     </html>
