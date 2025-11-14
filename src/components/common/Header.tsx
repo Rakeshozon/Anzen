@@ -8,7 +8,7 @@ export function Header() {
       <div className="container flex h-14 max-w-screen-2xl items-center">
         <Link href="/" className="flex items-center space-x-2">
           <span className="font-bold sm:inline-block font-headline">
-            DekhoBharat
+            DekhoBharath
           </span>
         </Link>
       </div>
