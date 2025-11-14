@@ -7,15 +7,16 @@ import { Footer } from '@/components/common/Footer';
 import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
-  title: 'Dekho Bharath | Discover Incredible India',
-  description:
-    'Dekho Bharath is your digital window to explore the beauty, culture, and heritage of India.',
-  metadataBase: new URL('https://dekhobharath.com'),
+  title: 'DekhoBharat | Discover Incredible India',
+  description: 'Discover Incredible India - Explore the beauty, culture, and heritage of India.',
+  metadataBase: new URL('https://dekhobharat.com'),
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{ children: React.ReactNode }>) {
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
@@ -25,16 +26,12 @@ export default function RootLayout({
           content="ca-pub-1474842596122746"
         />
 
-        {/* ✅ Consent-Manager (GDPR/Privacy) */}
+        {/* ✅ Google AdSense Script */}
         <Script
-          id="consent-manager"
-          src="https://cdn.consentmanager.net/delivery/autoblocking/83adfde8529dd.js"
-          data-cmp-ab="1"
-          data-cmp-host="c.delivery.consentmanager.net"
-          data-cmp-cdn="cdn.consentmanager.net"
-          data-cmp-codesrc="16"
-          strategy="beforeInteractive"
-          type="text/javascript"
+          async
+          strategy="afterInteractive"
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1474842596122746"
+          crossOrigin="anonymous"
         />
 
         {/* ✅ Google Analytics */}
@@ -52,28 +49,16 @@ export default function RootLayout({
           `}
         </Script>
 
-        {/* ✅ Google AdSense (Auto Ads enabled) */}
-        <Script
-          async
-          strategy="afterInteractive"
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1474842596122746"
-          crossOrigin="anonymous"
-        />
-
         {/* ✅ Fonts */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap"
-          rel="stylesheet"
-        />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />
       </head>
-
-      <body className={cn('min-h-screen bg-background font-body antialiased')}>
+      <body
+        className={cn(
+          'min-h-screen bg-background font-body antialiased'
+        )}
+      >
         <div className="relative flex min-h-screen flex-col">
           <Header />
           <main className="flex-1">{children}</main>
