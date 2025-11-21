@@ -1,0 +1,63 @@
+import Image from "next/image";
+
+const PLACES = [
+  {
+    name: "Taj Mahal",
+    desc: "Agra, Uttar Pradesh",
+    img: "https://images.unsplash.com/photo-1564507592333-c60657eea523?w=1200&h=600&fit=crop",
+  },
+  {
+    name: "Himalayas",
+    desc: "Northern India",
+    img: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&h=600&fit=crop",
+  },
+  {
+    name: "Kerala Backwaters",
+    desc: "Kerala",
+    img: "https://images.unsplash.com/photo-1537225228614-b4fad34a0b19?w=1200&h=600&fit=crop",
+  },
+  {
+    name: "Ooty",
+    desc: "Tamil Nadu",
+    img: "https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=1200&h=600&fit=crop",
+  },
+  {
+    name: "Coorg",
+    desc: "Karnataka",
+    img: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=1200&h=600&fit=crop",
+  },
+];
+
+export default function SearchPage({
+  searchParams,
+}: {
+  searchParams: { query?: string };
+}) {
+  const q = (searchParams?.query || "").trim().toLowerCase();
+
+  const results = q
+    ? PLACES.filter((p) => p.name.toLowerCase().includes(q) || p.desc.toLowerCase().includes(q))
+    : PLACES;
+
+  return (
+    <main className="container mx-auto py-12">
+      <h1 className="mb-6 text-2xl font-bold">
+        Search results{q ? ` for "${searchParams?.query}"` : ""}
+      </h1>
+
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+        {results.map((p) => (
+          <article key={p.name} className="flex overflow-hidden rounded-md border">
+            <div className="relative h-32 w-40 flex-shrink-0">
+              <Image src={p.img} alt={p.name} fill className="object-cover" sizes="200px" />
+            </div>
+            <div className="p-4">
+              <h2 className="text-lg font-semibold">{p.name}</h2>
+              <p className="text-sm text-neutral-400">{p.desc}</p>
+            </div>
+          </article>
+        ))}
+      </div>
+    </main>
+  );
+}
