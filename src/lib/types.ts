@@ -12,7 +12,7 @@ export type Attraction = {
   name: string;
   description: string;
   images: string[]; // image URLs or IDs
-  category: 'Museum' | 'Waterfall' | 'Fort' | 'Park' | 'Temple' | string; // Allow other strings
+  category: 'Museum' | 'Waterfall' | 'Fort' | 'Park' | 'Temple' | 'Trek' | 'Historical' | string; // Allow other strings
   latitude: number;
   longitude: number;
   reviews: Review[];
@@ -37,7 +37,7 @@ export type State = {
 // Schemas and types for the find-attractions flow
 export const FindAttractionsInputSchema = z.object({
   city: z.string().describe('The city to find attractions in.'),
-  category: z.string().optional().describe('A category to filter attractions by (e.g., "Museum", "Park").'),
+  category: z.string().optional().describe('A category to filter attractions by (e.g., "Museum", "Park", "Trek", "Waterfall").'),
 });
 export type FindAttractionsInput = z.infer<typeof FindAttractionsInputSchema>;
 
