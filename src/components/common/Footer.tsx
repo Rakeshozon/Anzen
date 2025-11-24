@@ -107,8 +107,8 @@ export function Footer() {
         {/* Copyright + Credits */}
         <div className="mt-4 text-center text-sm text-muted-foreground">
           <p>
-            Created by <strong>Rakeshozon</strong>, co-founders{" "}
-            <strong>Dr. Puli Venu</strong> and <strong>Rakesh</strong>
+            Created by <strong>Rakesh</strong>, founder{" "}
+            <strong>Dr. Puli Venu</strong> and Co-founder <strong>Rakesh</strong>
           </p>
           <p>
             &copy; {new Date().getFullYear()} <strong>DekhoBharath</strong>. All Rights Reserved.
