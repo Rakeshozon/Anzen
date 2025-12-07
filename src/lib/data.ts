@@ -74,7 +74,7 @@ export const states: State[] = [
   {
     name: 'Karnataka',
     cities: [
-      'Bengaluru', 'Mysuru', 'Coorg', 'Hampi', 'Gokarna', 'Udupi', 'Chikmagalur', 'Murudeshwar', 'Badami', 'Dandeli', 'Mangaluru'
+      'Bengaluru', 'Mysuru', 'Coorg', 'Hampi', 'Gokarna', 'Udupi', 'Chikmagalur', 'Murudeshwar', 'Badami', 'Dandeli', 'Mangaluru','Raichur'
     ]
   },
   {
@@ -144,7 +144,7 @@ export const states: State[] = [
   {
     name: 'Tamil Nadu',
     cities: [
-      'Chennai', 'Coimbatore', 'Madurai', 'Ooty', 'Kodaikanal', 'Mahabalipuram', 'Rameshwaram', 'Kanyakumari', 'Thanjavur', 'Yercaud', 'Velankanni', 'Kumbakonam', 'Tiruchirappalli'
+      'Chennai', 'Coimbatore', 'Madurai', 'Ooty', 'Kodaikanal', 'Kancheepuram','Mahabalipuram', 'Rameshwaram', 'Kanyakumari', 'Thanjavur', 'Yercaud', 'Velankanni', 'Kumbakonam', 'Tiruchirappalli'
     ]
   },
   {
