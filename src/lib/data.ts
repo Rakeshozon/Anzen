@@ -16,7 +16,7 @@ export const states: State[] = [
   { name: 'Himachal Pradesh', cities: ['Shimla', 'Manali', 'Dharamshala'] },
   { name: 'Jammu and Kashmir', cities: ['Srinagar', 'Jammu', 'Leh'] },
   { name: 'Jharkhand', cities: ['Ranchi', 'Jamshedpur'] },
-  { name: 'Karnataka', cities: ['Bengaluru', 'Mysuru', 'Hampi','belgaum','Raichur'] },
+  { name: 'Karnataka', cities: ['Bengaluru', 'Mysuru', 'Hampi'] },
   { name: 'Kerala', cities: ['Kochi', 'Thiruvananthapuram', 'Munnar', 'Alappuzha'] },
   { name: 'Ladakh', cities: ['Leh', 'Kargil'] },
   { name: 'Lakshadweep', cities: ['Kavaratti'] },
