@@ -12,9 +12,9 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
 type CityPageProps = {
-  params: {
+  params: Promise<{
     cityName: string;
-  };
+  }>;
 };
 
 const getCityData = (cityName: string): { city: City, cityImage: any } => {
@@ -41,7 +41,8 @@ const getCityData = (cityName: string): { city: City, cityImage: any } => {
 
 export default async function CityPage({ params }: CityPageProps) {
   // Fetch static city data or create a dynamic one
-  const { city, cityImage } = getCityData(params.cityName);
+  const { cityName } = await params;
+  const { city, cityImage } = getCityData(cityName);
 
   if (!city) {
     notFound();
@@ -76,18 +77,18 @@ export default async function CityPage({ params }: CityPageProps) {
 
       <section className="container mx-auto px-4 py-12">
         <Button asChild variant="outline" className="mb-8">
-           <Link href="/">
-                <ArrowLeft /> Go Back Home
-            </Link>
+          <Link href="/">
+            <ArrowLeft /> Go Back Home
+          </Link>
         </Button>
         {error && (
-           <Alert variant="destructive" className="mb-8">
-             <AlertCircle className="h-4 w-4" />
-             <AlertTitle>Error Fetching Attractions</AlertTitle>
-             <AlertDescription>
+          <Alert variant="destructive" className="mb-8">
+            <AlertCircle className="h-4 w-4" />
+            <AlertTitle>Error Fetching Attractions</AlertTitle>
+            <AlertDescription>
               {error}
-             </AlertDescription>
-           </Alert>
+            </AlertDescription>
+          </Alert>
         )}
         <AttractionsTabs attractions={attractions as ApiAttraction[]} />
       </section>
