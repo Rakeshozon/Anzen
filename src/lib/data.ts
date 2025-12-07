@@ -1,182 +1,42 @@
 import type { City, State } from './types';
 
 export const states: State[] = [
-  { name: 'Andaman and Nicobar Islands', cities: ['Port Blair', 'Havelock Island', 'Neil Island'] },
-  {
-    name: 'Andhra Pradesh',
-    cities: [
-      'Visakhapatnam', 'Tirupati', 'Araku Valley', 'Gandikota', 'Vijayawada', 'Kurnool', 'Srisailam', 'Lepakshi', 'Rajahmundry', 'Amaravati'
-    ]
-  },
-  {
-    name: 'Arunachal Pradesh',
-    cities: [
-      'Tawang', 'Itanagar', 'Ziro Valley', 'Bomdila', 'Pasighat', 'Mechuka'
-    ]
-  },
-  {
-    name: 'Assam',
-    cities: [
-      'Guwahati', 'Kaziranga', 'Majuli', 'Tezpur', 'Manas National Park', 'Haflong'
-    ]
-  },
-  {
-    name: 'Bihar',
-    cities: [
-      'Bodh Gaya', 'Patna', 'Nalanda', 'Rajgir', 'Vaishali', 'Valmiki Nagar', 'Bhagalpur'
-    ]
-  },
+  { name: 'Andaman and Nicobar Islands', cities: ['Port Blair'] },
+  { name: 'Andhra Pradesh', cities: ['Visakhapatnam', 'Tirupati', 'Vijayawada'] },
+  { name: 'Arunachal Pradesh', cities: ['Tawang', 'Itanagar'] },
+  { name: 'Assam', cities: ['Guwahati', 'Kaziranga'] },
+  { name: 'Bihar', cities: ['Patna', 'Gaya', 'Nalanda'] },
   { name: 'Chandigarh', cities: ['Chandigarh'] },
-  {
-    name: 'Chhattisgarh',
-    cities: [
-      'Raipur', 'Jagdalpur', 'Chitrakote', 'Mainpat', 'Bilaspur'
-    ]
-  },
-  { name: 'Dadra and Nagar Haveli and Daman and Diu', cities: ['Daman', 'Diu', 'Silvassa'] },
-  {
-    name: 'Delhi',
-    cities: [
-      'New Delhi', 'Old Delhi', 'South Delhi'
-    ]
-  },
-  { name: 'Goa', cities: ['North Goa', 'South Goa', 'Panaji', 'Dudhsagar', 'Calangute', 'Anjuna'] },
-  {
-    name: 'Gujarat',
-    cities: [
-      'Ahmedabad', 'Kutch', 'Gir', 'Somnath', 'Dwarka', 'Vadodara', 'Statue of Unity', 'Saputara', 'Bhuj'
-    ]
-  },
-  {
-    name: 'Haryana',
-    cities: [
-      'Gurugram', 'Kurukshetra', 'Morni Hills', 'Sultanpur', 'Panipat'
-    ]
-  },
-  {
-    name: 'Himachal Pradesh',
-    cities: [
-      'Shimla', 'Manali', 'Dharamshala', 'Dalhousie', 'Kasol', 'Spiti Valley', 'Kasauli', 'Bir Billing', 'Kullu', 'Jibhi'
-    ]
-  },
-  {
-    name: 'Jammu and Kashmir',
-    cities: [
-      'Srinagar', 'Gulmarg', 'Pahalgam', 'Sonamarg', 'Vaishno Devi', 'Patnitop', 'Jammu'
-    ]
-  },
-  {
-    name: 'Jharkhand',
-    cities: [
-      'Ranchi', 'Deoghar', 'Jamshedpur', 'Netarhat', 'Hazaribagh'
-    ]
-  },
-  {
-    name: 'Karnataka',
-    cities: [
-      'Bengaluru', 'Mysuru', 'Coorg', 'Hampi', 'Gokarna', 'Udupi', 'Chikmagalur', 'Murudeshwar', 'Badami', 'Dandeli', 'Mangaluru'
-    ]
-  },
-  {
-    name: 'Kerala',
-    cities: [
-      'Kochi', 'Thiruvananthapuram', 'Munnar', 'Alappuzha', 'Wayanad', 'Varkala', 'Thekkady', 'Kovalam', 'Kumarakom', 'Vagamon', 'Bekal'
-    ]
-  },
-  { name: 'Ladakh', cities: ['Leh', 'Nubra Valley', 'Pangong Lake', 'Kargil', 'Hanle'] },
-  { name: 'Lakshadweep', cities: ['Agatti', 'Bangaram', 'Kavaratti', 'Minicoy'] },
-  {
-    name: 'Madhya Pradesh',
-    cities: [
-      'Khajuraho', 'Gwalior', 'Ujjain', 'Pachmarhi', 'Kanha', 'Bandhavgarh', 'Bhopal', 'Indore', 'Sanchi', 'Orcha'
-    ]
-  },
-  {
-    name: 'Maharashtra',
-    cities: [
-      'Mumbai', 'Pune', 'Lonavala', 'Mahabaleshwar', 'Shirdi', 'Aurangabad', 'Nashik', 'Alibaug', 'Tarkarli', 'Khandala', 'Nagpur'
-    ]
-  },
-  {
-    name: 'Manipur',
-    cities: [
-      'Imphal', 'Loktak Lake', 'Moreh'
-    ]
-  },
-  {
-    name: 'Meghalaya',
-    cities: [
-      'Shillong', 'Cherrapunji', 'Dawki', 'Mawlynnong', 'Tura'
-    ]
-  },
-  {
-    name: 'Mizoram',
-    cities: [
-      'Aizawl', 'Reiek', 'Vantawng Falls'
-    ]
-  },
-  {
-    name: 'Nagaland',
-    cities: [
-      'Kohima', 'Dimapur', 'Dzukou Valley', 'Mon'
-    ]
-  },
-  {
-    name: 'Odisha',
-    cities: [
-      'Puri', 'Bhubaneswar', 'Konark', 'Chilika Lake', 'Gopalpur', 'Rourkela'
-    ]
-  },
-  { name: 'Puducherry', cities: ['Puducherry', 'Auroville', 'Karaikal'] },
-  {
-    name: 'Punjab',
-    cities: [
-      'Amritsar', 'Chandigarh', 'Ludhiana', 'Patiala', 'Jalandhar'
-    ]
-  },
-  {
-    name: 'Rajasthan',
-    cities: [
-      'Jaipur', 'Udaipur', 'Jodhpur', 'Jaisalmer', 'Pushkar', 'Mount Abu', 'Bikaner', 'Chittorgarh', 'Ranthambore', 'Ajmer'
-    ]
-  },
-  { name: 'Sikkim', cities: ['Gangtok', 'Pelling', 'Nathula Pass', 'Lachung', 'Yumthang Valley', 'Ravangla'] },
-  {
-    name: 'Tamil Nadu',
-    cities: [
-      'Chennai', 'Coimbatore', 'Madurai', 'Ooty', 'Kodaikanal', 'Mahabalipuram', 'Rameshwaram', 'Kanyakumari', 'Thanjavur', 'Yercaud', 'Velankanni', 'Kumbakonam', 'Tiruchirappalli'
-    ]
-  },
-  {
-    name: 'Telangana',
-    cities: [
-      'Hyderabad', 'Warangal', 'Nagarjuna Sagar', 'Bhadrachalam', 'Ramappa'
-    ]
-  },
-  {
-    name: 'Tripura',
-    cities: [
-      'Agartala', 'Unakoti', 'Udaipur'
-    ]
-  },
-  {
-    name: 'Uttar Pradesh',
-    cities: [
-      'Agra', 'Varanasi', 'Ayodhya', 'Lucknow', 'Mathura', 'Vrindavan', 'Prayagraj', 'Jhansi', 'Fatehpur Sikri', 'Sarnath'
-    ]
-  },
-  {
-    name: 'Uttarakhand',
-    cities: [
-      'Rishikesh', 'Mussoorie', 'Nainital', 'Auli', 'Jim Corbett', 'Haridwar', 'Dehradun', 'Kedarnath', 'Badrinath', 'Almora', 'Ranikhet', 'Lansdowne'
-    ]
-  },
-  {
-    name: 'West Bengal',
-    cities: [
-      'Kolkata', 'Darjeeling', 'Kalimpong', 'Digha', 'Sundarbans', 'Siliguri', 'Mandarmani', 'Shantiniketan'
-    ]
-  }
+  { name: 'Chhattisgarh', cities: ['Raipur', 'Bastar'] },
+  { name: 'Dadra and Nagar Haveli and Daman and Diu', cities: ['Daman', 'Diu'] },
+  { name: 'Delhi', cities: ['Delhi'] },
+  { name: 'Goa', cities: ['Panaji', 'Madgaon'] },
+  { name: 'Gujarat', cities: ['Ahmedabad', 'Surat', 'Vadodara', 'Kutch'] },
+  { name: 'Haryana', cities: ['Gurugram', 'Faridabad', 'Kurukshetra'] },
+  { name: 'Himachal Pradesh', cities: ['Shimla', 'Manali', 'Dharamshala'] },
+  { name: 'Jammu and Kashmir', cities: ['Srinagar', 'Jammu', 'Leh'] },
+  { name: 'Jharkhand', cities: ['Ranchi', 'Jamshedpur'] },
+  { name: 'Karnataka', cities: ['Bengaluru', 'Mysuru', 'Hampi','belgaum','Raichur'] },
+  { name: 'Kerala', cities: ['Kochi', 'Thiruvananthapuram', 'Munnar', 'Alappuzha'] },
+  { name: 'Ladakh', cities: ['Leh', 'Kargil'] },
+  { name: 'Lakshadweep', cities: ['Kavaratti'] },
+  { name: 'Madhya Pradesh', cities: ['Bhopal', 'Indore', 'Khajuraho'] },
+  { name: 'Maharashtra', cities: ['Mumbai', 'Pune', 'Aurangabad'] },
+  { name: 'Manipur', cities: ['Imphal'] },
+  { name: 'Meghalaya', cities: ['Shillong', 'Cherrapunji'] },
+  { name: 'Mizoram', cities: ['Aizawl'] },
+  { name: 'Nagaland', cities: ['Kohima', 'Dimapur'] },
+  { name: 'Odisha', cities: ['Bhubaneswar', 'Puri', 'Konark'] },
+  { 'name': 'Puducherry', 'cities': ['Puducherry'] },
+  { name: 'Punjab', cities: ['Amritsar', 'Ludhiana'] },
+  { name: 'Rajasthan', cities: ['Jaipur', 'Udaipur', 'Jodhpur', 'Jaisalmer'] },
+  { name: 'Sikkim', cities: ['Gangtok', 'Pelling'] },
+  { 'name': 'Tamil Nadu', 'cities': ['Chennai', 'Madurai', 'Kanyakumari'] },
+  { 'name': 'Telangana', 'cities': ['Hyderabad'] },
+  { 'name': 'Tripura', 'cities': ['Agartala'] },
+  { name: 'Uttar Pradesh', cities: ['Lucknow', 'Varanasi', 'Agra'] },
+  { name: 'Uttarakhand', cities: ['Dehradun', 'Rishikesh', 'Nainital'] },
+  { name: 'West Bengal', cities: ['Kolkata', 'Darjeeling'] }
 ];
 
 export const cities: City[] = [
@@ -260,10 +120,10 @@ export const getFeaturedCities = () => cities;
 export const getStates = () => states;
 
 export const findImage = (id: string) => {
-  // In a real app, this would be a more robust lookup.
-  // For now, we are just mocking a simple find.
-  const allImages = [
-    ...cities.map(c => ({ id: c.image, url: `https://picsum.photos/seed/${c.image}/800/600` })),
-  ];
-  return allImages.find(img => img.id === id);
+    // In a real app, this would be a more robust lookup.
+    // For now, we are just mocking a simple find.
+    const allImages = [
+        ...cities.map(c => ({id: c.image, url: `https://picsum.photos/seed/${c.image}/800/600`})),
+    ];
+    return allImages.find(img => img.id === id);
 }
