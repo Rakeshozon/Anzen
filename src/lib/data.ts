@@ -74,7 +74,7 @@ export const states: State[] = [
   {
     name: 'Karnataka',
     cities: [
-      'Bengaluru', 'Bhimanakatte','Mysuru', 'Coorg', 'Hampi', 'Gokarna', 'Udupi', 'Chikmagalur', 'Murudeshwar','Belgaum', 'Badami', 'Dandeli', 'Mangaluru','Raichur'
+      'Bengaluru', 'Bhimanakatte','Mysuru', 'Coorg', 'Hampi', 'Gokarna', 'Udupi', 'Chikmagalur', 'Murudeshwar','Belgaum', 'Badami', 'Dandeli', 'Mangaluru','Raichur','Gulbarga'
     ]
   },
   {
