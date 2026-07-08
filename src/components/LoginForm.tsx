@@ -7,15 +7,13 @@ import { useAuth } from '@/context/AuthContext';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-import { AlertCircle, User, Mail, Lock, UserPlus } from 'lucide-react';
+import { AlertCircle, Mail, Lock, LogIn } from 'lucide-react';
 
-export const SignupForm: React.FC = () => {
+export const LoginForm: React.FC = () => {
   const router = useRouter();
-  const { signup, error: authError } = useAuth();
-  const [displayName, setDisplayName] = useState('');
+  const { login, error: authError } = useAuth();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -23,27 +21,17 @@ export const SignupForm: React.FC = () => {
     e.preventDefault();
     setError(null);
 
-    if (!displayName || !email || !password || !confirmPassword) {
+    if (!email || !password) {
       setError('Please fill in all fields');
-      return;
-    }
-
-    if (password !== confirmPassword) {
-      setError('Passwords do not match');
-      return;
-    }
-
-    if (password.length < 6) {
-      setError('Password must be at least 6 characters');
       return;
     }
 
     try {
       setLoading(true);
-      await signup(email, password, displayName);
+      await login(email, password);
       router.push('/');
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'Signup failed');
+      setError(err instanceof Error ? err.message : 'Login failed');
     } finally {
       setLoading(false);
     }
@@ -54,7 +42,7 @@ export const SignupForm: React.FC = () => {
       <div className="bg-white rounded-lg shadow-lg p-8">
         <div className="text-center mb-8">
           <h1 className="text-4xl font-bold text-[#FF9933] mb-2">Dekho India</h1>
-          <p className="text-gray-600">Create your account to start exploring</p>
+          <p className="text-gray-600">Welcome back! Please log in to your account</p>
         </div>
 
         {(error || authError) && (
@@ -64,23 +52,7 @@ export const SignupForm: React.FC = () => {
           </div>
         )}
 
-        <form onSubmit={handleSubmit} className="space-y-4">
-          <div>
-            <Label htmlFor="displayName" className="flex items-center gap-2 mb-2">
-              <User size={16} className="text-[#FF9933]" />
-              Full Name
-            </Label>
-            <Input
-              id="displayName"
-              type="text"
-              value={displayName}
-              onChange={(e) => setDisplayName(e.target.value)}
-              placeholder="John Doe"
-              disabled={loading}
-              className="border-gray-300 focus:border-[#FF9933] focus:ring-[#FF9933]"
-            />
-          </div>
-
+        <form onSubmit={handleSubmit} className="space-y-5">
           <div>
             <Label htmlFor="email" className="flex items-center gap-2 mb-2">
               <Mail size={16} className="text-[#FF9933]" />
@@ -111,40 +83,23 @@ export const SignupForm: React.FC = () => {
               disabled={loading}
               className="border-gray-300 focus:border-[#FF9933] focus:ring-[#FF9933]"
             />
-            <p className="text-xs text-gray-500 mt-1">At least 6 characters</p>
-          </div>
-
-          <div>
-            <Label htmlFor="confirmPassword" className="flex items-center gap-2 mb-2">
-              <Lock size={16} className="text-[#FF9933]" />
-              Confirm Password
-            </Label>
-            <Input
-              id="confirmPassword"
-              type="password"
-              value={confirmPassword}
-              onChange={(e) => setConfirmPassword(e.target.value)}
-              placeholder="••••••••"
-              disabled={loading}
-              className="border-gray-300 focus:border-[#FF9933] focus:ring-[#FF9933]"
-            />
           </div>
 
           <Button
             type="submit"
             disabled={loading}
-            className="w-full bg-[#32CD32] hover:bg-green-600 text-white font-semibold py-2 flex items-center justify-center gap-2"
+            className="w-full bg-[#FF9933] hover:bg-[#E68A23] text-white font-semibold py-2 flex items-center justify-center gap-2"
           >
-            <UserPlus size={18} />
-            {loading ? 'Creating account...' : 'Create Account'}
+            <LogIn size={18} />
+            {loading ? 'Logging in...' : 'Log In'}
           </Button>
         </form>
 
         <div className="mt-6 pt-6 border-t border-gray-200 text-center">
           <p className="text-gray-600 mb-3">
-            Already have an account?{' '}
-            <Link href="/login" className="text-[#FF9933] font-semibold hover:underline">
-              Log in here
+            Don't have an account?{' '}
+            <Link href="/signup" className="text-[#FF9933] font-semibold hover:underline">
+              Sign up here
             </Link>
           </p>
           <Link href="/" className="text-sm text-gray-500 hover:text-gray-700">
