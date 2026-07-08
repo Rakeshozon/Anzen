@@ -1,0 +1,31 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Allow anyone to read visits
+    // Allow logged-in users to write their own visit
+    match /visits/{userId} {
+      allow read: if true;
+      allow write: if request.auth != null && request.auth.uid == userId;
+    }
+    
+    // User profiles - only accessible by the user
+    match /users/{userId} {
+      allow read: if request.auth.uid == userId;
+      allow write: if request.auth.uid == userId;
+      allow create: if request.auth.uid == request.resource.data.userId;
+    }
+    
+    // Search history - only accessible by the user who owns it
+    match /searchHistory/{searchId} {
+      allow read, write: if request.auth != null && 
+                            request.auth.uid == resource.data.userId;
+      allow create: if request.auth != null && 
+                       request.auth.uid == request.resource.data.userId;
+    }
+    
+    // For the test page (optional, delete later)
+    match /test_connection/{docId} {
+      allow read, write: if true;
+    }
+  }
+}
